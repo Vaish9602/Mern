@@ -123,8 +123,9 @@ A.
 ****
 ***
 **
-*
-B.
+**/
+
+/*B.
 1
 12
 123
@@ -137,16 +138,16 @@ B.
 if this condition is true the do block will again be executed else  it will stop there
 -Note -even thourgh  the condition false the statement under do bloock will execute once
 */
-
+/*/
 do {
     console.log("Hi,I'm do while loop");
 } while (false);
 
-const response = prompt("Do you want to continue?");
+//const response = prompt("Do you want to continue?");
 console.log(response)
 
 //
 let response1;
 let responseCounter = 0;
 
-///
+*/ //

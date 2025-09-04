@@ -136,4 +136,3 @@ let b2 = 10;
 
 if (a2 >= b2) console.log("a2 is maximum");
 console.log(" " * "1")
-    
