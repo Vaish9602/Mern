@@ -105,3 +105,33 @@ also child scopes can access var defined in parent scope but parent cannot acces
 
 console.log({ varVariable });
 var varVariable = 6;
+
+
+//hoisting//tdz write in your word
+/*Hoisting- variable and function names first, before running the code.
+sayHello(); // works
+function sayHello() {
+  console.log("Hello!");
+}
+But with var, only the declaration is hoisted, not the value.
+console.log(a); // undefined (not error)
+var a = 10;
+*/
+/*Temporal Dead Zone (TDZ)
+
+-It happens with let and const.
+
+-The variable exists in memory but is not accessible until the code reaches its declaration line.
+
+-If you try to access it before, you get an error (ReferenceError).
+
+Example:
+
+console.log(x); //  ReferenceError (TDZ)
+let x = 5;*/
+
+
+
+
+
+//matrix quetion
