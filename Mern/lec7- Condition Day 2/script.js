@@ -164,23 +164,7 @@ switch (true) {
 
 
 
-        break;
 
-    case 2:
-        elseif(grade >= 80)
-        console.log("B");
-        break;
-
-
-    case 3:
-        elseif(grade >= 70)
-        console.log("C");
-        break;
-
-    case 4:
-        elseif(grade >= 60)
-        console.log("D");
-        break;
 
     default:
         console.log("failed")
