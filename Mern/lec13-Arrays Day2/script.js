@@ -1,4 +1,4 @@
-// diamond pattern
+
 //**************************continuing arrays******************** */
 let arr = [2, 10, 6, 4, 9];
 
@@ -169,3 +169,24 @@ arr = [1, 2, "123", 2.344, true, [3, 4, "five", [2, 5, "printMe"]]];
 
 //How to print "printMe"from above array
 console.log(arr[5][3][2]);
+
+
+/** H.W  given an array of consecutive numbers but theres on number thats missing find it 
+ * input : [1,2,3,5, 6,7,8]
+ * output :4
+ */
+function findMissingNum(arrr) {
+    let n = arrr.length + 1;
+    let expectedSum = (n * (n + 1) / 2);
+    let actualSum = 0
+    for (let i = 0; i < arrr.length; i++) {
+        actualSum += arrr[i];
+
+
+    }
+    return expectedSum - actualSum;
+}
+
+let arrr = [1, 2, 3, 5, 6, 7, 8];
+console.log(findMissingNum(arrr));
+
