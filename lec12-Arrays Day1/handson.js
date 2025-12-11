@@ -193,7 +193,7 @@ for (let num = 2; num <= 8; num++) {
         }
     }
 
-    if (isPrime) {
+    if (isPrime && num!=1) {
         console.log(num);
     }
 }

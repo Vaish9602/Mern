@@ -152,9 +152,9 @@ console.log("      yruhjd    uhewd dojksdj dsds    ".trim()); //returns a new st
 console.log("abhishek".substring(2)); // ->gives substring from index = 2 to last index | [2, n)
 console.log("abhishek".substring(2, 6)); // ->gives substring from index = 2 to 5 | [2,5] | [2,6)
 console.log("abhishek".substring(-2)); // -> (converts negative values to 0) gives substring from [0,n)
-console.log("abhishek".substring(-2, 6)); // -> [0, 6)
-console.log("abhishek".substring(5, 2)); // -> [2, 5)
-console.log("abhishek".substring(5, -3)); // -> [0, 5)
+console.log("abhishek".substring(-2, 6)); // -> [0, 5)
+console.log("abhishek".substring(5, 2)); // -> [2, 4]
+console.log("abhishek".substring(5, -3)); // -> [0, 4
 
 // slice() -> almost same as substring() method, but only differs when the range is negative
 console.log("acciojob".slice(2)); // [2, n)

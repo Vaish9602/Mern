@@ -198,3 +198,129 @@ console.log("ABC123".toLowerCase());
 
 //toUpperCase()
 console.log("abs".toUpperCase());
+
+
+
+// pracice question string
+/**Reverse a String
+
+Problem: Print the string in reverse order.
+Example:
+Input: hello → Output: olleh */
+console.log("reverse string")
+
+function reverseString(str) {
+    let n = str.length;
+    let reverse = "";
+    for (let i = 0; i < n; i++) {
+
+        reverse += str[n - 1 - i]
+
+    }
+    return reverse
+}
+
+console.log(reverseString("hello"));
+
+
+/**2️⃣ Check Palindrome
+
+Problem: Check if a string reads the same forward and backward.
+Example:
+Input: madam → Output: YES */
+
+console.log("check palindrome ");
+
+function isPalindromeOrNot(str) {
+    let n = str.length;
+    let isPalindrome = true;
+    for (let i = 0; i < n; i++) {
+        if (str[i] !== str[n - 1 - i]) {
+            return "NO"
+        }
+    }
+
+
+    return "YES"
+}
+
+
+console.log(isPalindromeOrNot("madam"))
+
+
+/**3️⃣ Count Vowels and Consonants
+
+Problem: Count how many vowels and consonants are present in the string.
+Example:
+Input: education → Output: Vowels=5, Consonants=4 */
+console.log(" Count how many vowels and consonants ");
+
+function countVowelConsontants(str) {
+    let v = 0;
+    let c = 0;
+    str = str.toLowerCase()
+    for (let char of str) {
+        if ("aeiou".includes(char)) {
+            v++
+        } else if (char >= "a" && char <= "z") {
+            c++
+
+        }
+
+    }
+    return "vowels =" + v + ",consontants= " + c;
+
+}
+
+console.log(countVowelConsontants("education"))
+
+
+/**Anagram Check
+
+Problem: Check if two strings are anagrams of each other.
+Example:
+Input: listen, silent → Output: YES*/
+
+console.log("Check if two strings are anagrams of each other.");
+
+function anagramsOrNot(str1, str2) {
+
+    if (str1.length !== str2.length) return "NO"
+    const freq = {}
+    for (let char of str1) {
+        freq[char] = (freq[char] || 0) + 1
+
+    }
+    for (let char of str2) {
+        if (!freq[char]) return "NO";
+        freq[char]--;
+
+    }
+    return 'YES'
+
+}
+console.log(anagramsOrNot("listen", "silent"))
+
+
+/**6️⃣ First Non-Repeating Character
+
+Problem: Find the first character that appears only once.
+Example:
+Input: aabbcdee → Output: c*/
+
+console.log("First Non-Repeating Character")
+
+function firstNonRepeatingChar(str) {
+    const freq = {}
+    for (let char of str) {
+        freq[char] = (freq[char] || 0) + 1
+
+    }
+    for (let char of str) {
+        if (freq[char] === 1) {
+            return char
+        }
+    }
+    return "No reapeating char"
+}
+console.log(firstNonRepeatingChar("aabbcdee"));

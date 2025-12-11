@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Create & Remove Practice</title>
+    <style>
+        #container, #card, #box, #list, #tasks, #gallery {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>DOM Create & Remove Elements Practice</h1>
+
+    <!-- For appendChild, append, prepend -->
+    <div id="container">
+        <p id="para">Paragraph inside container</p>
+    </div>
+
+    <div id="card">
+        <h1>Card Title</h1>
+        <p>Card content</p>
+    </div>
+
+    <div id="box">
+        <span>Box Span 1</span>
+    </div>
+
+    <!-- For ul / li exercises -->
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+    <ul id="tasks">
+        <li>Task 1</li>
+        <li>Task 2</li>
+    </ul>
+
+    <!-- For images -->
+    <img id="photo" src="https://via.placeholder.com/100" alt="Photo">
+    <div id="gallery">
+        <img src="https://via.placeholder.com/80" alt="Gallery 1">
+        <img src="https://via.placeholder.com/80" alt="Gallery 2">
+    </div>
+
+    <p id="info">Some info paragraph</p>
+    <script>
+       // document.createElement()
+
+//Create a new <p> element and set its text to "Hello World".
+
+
+    let p=  document.createElement("p")
+    p.innerText="Hello world";
+    document.body.appendChild(p);
+
+//Create a new <li> element for a list.
+     let li= document.createElement("li")
+     li.innerText="New List";
+   document.querySelector("#list").appendChild(li);
+
+   //appendChild()
+   //Append a newly created <li> to an existing <ul id="list">.
+    document.querySelector("#list").appendChild(li);
+
+    //Append a new <p> to a <div id="container">.
+        document.querySelector("#container").appendChild(p);
+
+        //append()
+        //Append a new <span> element at the end of <div id="box"> using append().
+            let span=document.createElement("span");
+            span.innerText="new span";
+            document.querySelector("#box").append(span)
+
+            //Append multiple text nodes or elements at once to a <div>.
+                let para=document.createElement("p");
+                let heading=document.createElement("h1");
+                let section=document.createElement("section");
+                para.innerText="this is paragraph";
+                heading.innerText="this is heading";
+                section.innerText="this is section";
+                document.querySelector("div").append(para, heading, section);
+
+                //prepend()
+
+//Prepend a new <h2> element at the start of <div id="card">.
+    let head=document.createElement("h2");
+    head.innerText="this is h2 heading";
+    document.querySelector("#card").prepend(head);
+
+//Add a new <li> at the beginning of <ul id="tasks">.
+    let list= document.createElement("li");
+    list.innerText="this is a new list";
+    document.querySelector("#tasks").prepend(list)
+
+   // remove()
+
+//Remove a paragraph <p id="para"> from the DOM using remove().
+    document.querySelector("#para").remove()
+
+//Remove an image <img id="photo"> using remove().
+document.querySelector("#photo").remove()
+
+//removeChild()
+
+//Remove the first <li> from <ul id="list"> using removeChild().
+    document.querySelector("#list").removeChild(document.querySelector("#list li"));
+
+
+//Remove a <span> child from a <div id="box">.
+    document.querySelector("#box").removeChild(document.querySelector("#box span"));
+
+    
+  //insertBefore()
+
+//Insert a new <li> before the second <li> in <ul id="tasks">.
+    let list1=document.createElement("li");
+    list1.innerText="newwww Lisst"
+    let list2=document.querySelector("#tasks li:nth child(2)")
+    document.querySelector("#tasks").insertBefore(list1,list2);
+
+//Insert a new <p> before an existing <p id="para"> in <div id="container">.
+    let para1= document.createElement("p");
+    para1.innerText="this is also para";
+    let parent = document.querySelector("#container");
+let target = document.querySelector("#para");
+
+parent.insertBefore(para1, target);
+//Insert a new <img> before the first <img> in <div id="gallery">.
+    let img=document.createElement("img");
+    img.src="https://tse2.mm.bing.net/th/id/OIP.7-iJo3X0spIO5iAIbvrT6gHaEl?pid=Api&P=0&h=180";
+    let firstImg = document.querySelector("#gallery img");
+
+document.querySelector("#gallery").insertBefore(img, firstImg);
+   
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dom in Attribute</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+     <a id="link" href="https://example.com">Visit Site</a>
+<img id="img" src="photo.png" alt="">
+<input id="input" type="text" required>
+        
+        <script src="" async defer>
+            //getAttribute()
+// Get the href value of <a id="home-link"> using getAttribute().
+    document.querySelector("#home-link").getAttribute("href");
+    //setAttribute()
+
+ //Set the src of <img id="photo"> to "pic.jpg" using setAttribute().
+ document.querySelector("#photo").setAttribute("src","https://tse3.mm.bing.net/th/id/OIP.o0-_5Yz2Vr32GtIPXUKTLQHaEo?pid=Api&P=0&h=180")
+ //removeAttribute()
+ //remove the disabled attribute from <button id="submit-btn">.
+    document.querySelector("#submit-btn").removeAttribute("disabled");
+    //hasAttribute()
+
+// Check whether <input id="email"> has the attribute required.
+document.querySelector("#email").hasAttribute("required");
+
+        </script>
+    </body>
+</html>
