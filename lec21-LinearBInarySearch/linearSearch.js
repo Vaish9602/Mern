@@ -1,4 +1,22 @@
 /*=================================Linear Search================================== */
+/* Linear search checks each element one by one in a list/array until it finds the target value or reaches the end.
+
+
+When to use it
+
+When the array is small
+
+When the array is unsorted
+
+When simplicity is more important than speed
+
+Time Complexity
+
+Best case: O(1) → element at first position
+
+Worst case: O(n) → element at last or not present
+
+Space: O(1)*/
 
 //implementation of linear search
 

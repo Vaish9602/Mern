@@ -1,9 +1,37 @@
 /*=================================Binary Search================================== */
+ /*Binary Search checks the middle element first and then reduces the search space
+to half (left or right) based on comparison.
+It works ONLY on sorted arrays.
+ 
+instead of checking every element one-by-one (like Linear Search),
+Binary Search checks the middle element first.
+
+Then it decides:
+
+If the target is smaller, search left half
+
+If the target is bigger, search right half
+
+If equal → found ✔️
+
+This cutting-in-half process repeats until the element is found.
+When to use it
+
+✓ When the array is sorted
+✓ When the array is large
+✓ When speed/efficiency is important
+Time Complexity
+
+Best case: O(1)        → middle element is the target
+Worst case: O(log n)   → search space keeps halving
+Average: O(log n)
+Space: O(1)
+*/
 
 console.log("binary search");
 function binarySearch(arr,target){
     let left=0;
-    let right= arr.length-1;
+    let right= arr.length-1;;
     while(left<right){
         let mid=Math.floor(left+(right-left)/2);
         if(arr[mid]===target){
