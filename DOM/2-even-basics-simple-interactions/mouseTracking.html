@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Document</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            .circle{
+                height:40px;
+                width:40px;
+                border-radius:50%;
+                background-color: black;
+                position:relative;
+            }
+        </style>
+    </head>
+    <body>
+       <section class="circle"></section>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded",function(){
+                const circle=document.querySelector(".circle");
+                document.addEventListener("mousemove", function(event){
+                    const{ clientX, clientY }=event;
+                    /*clientX → horizontal mouse position (from left of viewport)
+
+clientY → vertical mouse position (from top of viewport)*/
+                    circle.style.top=`${clientY-20}px`;
+                    circle.style.left=`${clientX-20}px`;
+                })
+
+            })
+        </script>
+    </body>
+</html>
