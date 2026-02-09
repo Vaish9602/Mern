@@ -38,7 +38,7 @@ for (let i = 100; i <= 200; i++) {
 
 
 }
-//continue keyword-> skips furtur statement  and directly jumps to updation part
+//continue keyword-> skips further statement  and directly jumps to updation part
 //print the square of all nos expect nos divisible by 17 from 1 to 100
 for (let i = 1; i <= 100; i++) {
     console.log(i);
