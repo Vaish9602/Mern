@@ -102,7 +102,7 @@ console.log("firstDigit", number2, "is", firstDigit);
 
 /* NOTE:
 - to eliminate the digit we use -> divide(/)
-- to extract/print the digit used -> nodule
+- to extract/print the digit used -> module
 */
 
 /* Some weird behaviours of Arithmetic operators with string*/
