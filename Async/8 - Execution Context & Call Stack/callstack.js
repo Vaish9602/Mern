@@ -51,3 +51,19 @@ function factorial(n) {
 }
 
 factorial(3);
+
+
+
+//✅ Debounce
+
+// Wait until user stops, then run.
+
+//Throttle
+//Run every few seconds while user keeps doing it.
+//
+
+//
+// call stack order - last in first out
+
+//Hoisting = Declaration first, execution later.
+//TDZ is the period where a let or const variable is hoisted but cannot be accessed before initialization.
