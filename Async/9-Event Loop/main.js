@@ -73,5 +73,6 @@ function timer(){
 //timer();
 
 /**task queue callbacks-setTimeout,setInterval ,DOM event-click scroll,input ,submit etc.box
- * microtask
+ * microtask queue callbacks
+ * -promise.resolve ,promises.reject ,queueMicrotask,MutationObserver
  */
