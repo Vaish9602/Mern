@@ -15,7 +15,7 @@ function Form() {
   function handlePasswordChange(event) {
     setPassword(event.target.value);
   }
-  function login({ username, password }) {
+  function login({ username }) {
     console.log("trying to login user....");
     setTimeout(() => {
       console.log("user logged in with username:", username);
