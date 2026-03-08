@@ -1,0 +1,4 @@
+export const todo=[{
+    id:1,title:"learn node.js",
+    completed:false
+}]
